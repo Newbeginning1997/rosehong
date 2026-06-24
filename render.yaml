@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: quet-du-lieu-doanh-nghiep-xnk
+    runtime: node
+    region: singapore
+    plan: starter
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: OPEN_BROWSER
+        value: "0"
+      - key: LEAD_SCANNER_DATA_DIR
+        value: /var/data
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: xnk-data
+      mountPath: /var/data
+      sizeGB: 1

@@ -1,0 +1,25 @@
+# Runtime data
+.env
+.env.*
+!.env.example
+data/
+runtime/
+*.log
+
+# Dependencies
+node_modules/
+
+# Local build artifacts
+build/
+dist/
+release/
+
+# Python/helper cache
+__pycache__/
+*.pyc
+.venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
