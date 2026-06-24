@@ -10,6 +10,7 @@ Tool tìm lead doanh nghiệp từ Google Maps thông qua SerpApi, quản lý da
 - Nếu lead có website, tool tự quét email công khai từ trang chủ và các trang liên hệ phổ biến.
 - Quản lý trạng thái lead: mới, đã liên hệ, quan tâm, follow up, chốt, mất.
 - Ghi chú, chọn từng lead, xóa lead, gửi email cho lead đã chọn.
+- Mở nhanh Zalo Desktop/Web theo số điện thoại của lead khi máy có hỗ trợ Zalo.
 - Xuất Excel `.xls` và CSV với từng cột rõ ràng.
 - Đăng nhập, đăng xuất và cấp user cho người khác sử dụng.
 - Admin Console để xem tổng user, user hoạt động/bị khóa, lead/email theo từng user.

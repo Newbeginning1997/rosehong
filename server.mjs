@@ -10,7 +10,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const APP_NAME = "Quét Dữ Liệu Doanh Nghiệp XNK";
-const APP_VERSION = "0.4.2";
+const APP_VERSION = "0.4.3";
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const RUNTIME_ROOT = process.pkg ? dirname(process.execPath) : ROOT;
 const DEFAULT_DATA_ROOT = process.pkg && process.platform === "darwin"
@@ -737,7 +737,7 @@ const INDEX_HTML = String.raw`
     }
 
     .mini-trend{color:var(--success)!important;font-weight:850!important}.theme-toggle{border-radius:999px}.advanced-filters{border:1px solid var(--border);border-radius:16px;background:#f8fafc;padding:4px 12px 12px}.advanced-filters summary{min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;color:#334155;font-weight:900}.advanced-filters summary small{color:var(--muted);font-weight:750}.advanced-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:8px}.primary-search{padding-top:0}.view-toggle{display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--border);border-radius:999px;background:#fff;box-shadow:0 8px 22px rgba(15,23,42,.05)}.view-toggle button{border:0;min-height:30px;padding:0 12px;border-radius:999px;background:transparent;color:var(--muted);font-size:12px;font-weight:850;transition:background .18s ease,color .18s ease,transform .18s ease}.view-toggle button.active{background:#0f172a;color:#fff}.view-toggle button:hover{transform:translateY(-1px)}
-    .lead-card{border-radius:18px;padding:14px;min-height:156px;gap:11px;animation:cardIn .2s ease both}.lead-card.dragging{opacity:.55;transform:scale(.99)}.lead-card.pipeline-card{min-height:136px;padding:12px;border-radius:16px}@keyframes cardIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.lead-top{grid-template-columns:24px 44px minmax(0,1fr) auto;gap:10px}.lead-checkbox{margin-top:13px}.company-avatar{width:44px;height:44px;border-radius:13px;border:1px solid rgba(15,118,110,.14);background:linear-gradient(135deg,#ecfdf5,#dbeafe);color:#0f766e;display:grid;place-items:center;overflow:hidden;font-weight:900;font-size:13px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.62)}.company-avatar img{width:100%;height:100%;object-fit:cover;background:#fff}.company-name{font-size:15px;font-weight:900}.lead-info-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;color:#334155;font-size:12px}.info-item{display:inline-flex;align-items:center;gap:6px;min-width:0;line-height:1.35;color:inherit}.info-item svg{width:14px;height:14px;color:var(--primary);flex:0 0 auto}.info-item span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.info-item.muted{color:var(--muted)}
+    .lead-card{border-radius:18px;padding:14px;min-height:156px;gap:11px;animation:cardIn .2s ease both}.lead-card.dragging{opacity:.55;transform:scale(.99)}.lead-card.pipeline-card{min-height:136px;padding:12px;border-radius:16px}@keyframes cardIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}.lead-top{grid-template-columns:24px 44px minmax(0,1fr) auto;gap:10px}.lead-checkbox{margin-top:13px}.company-avatar{width:44px;height:44px;border-radius:13px;border:1px solid rgba(15,118,110,.14);background:linear-gradient(135deg,#ecfdf5,#dbeafe);color:#0f766e;display:grid;place-items:center;overflow:hidden;font-weight:900;font-size:13px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.62)}.company-avatar img{width:100%;height:100%;object-fit:cover;background:#fff}.company-name{font-size:15px;font-weight:900}.lead-info-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;color:#334155;font-size:12px}.info-item{display:inline-flex;align-items:center;gap:6px;min-width:0;line-height:1.35;color:inherit}.info-item svg{width:14px;height:14px;color:var(--primary);flex:0 0 auto}.info-item span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.info-item.muted{color:var(--muted)}.zalo-button{border:0;border-radius:999px;background:#0068ff;color:#fff;width:30px;height:22px;display:inline-grid;place-items:center;font-size:10px;font-weight:900;line-height:1;letter-spacing:0;box-shadow:0 8px 18px rgba(0,104,255,.22);cursor:pointer;flex:0 0 auto;transition:background .18s ease,transform .18s ease}.zalo-button:hover{background:#0055d6;transform:translateY(-1px)}.zalo-inline{display:inline-flex;align-items:center;gap:8px;min-width:0}.zalo-inline .zalo-button{width:auto;min-width:46px;padding:0 9px}
     .score-badge{display:inline-grid;gap:2px;min-width:94px;justify-items:center;border-radius:16px;padding:8px 10px;color:#fff;font-weight:900;text-align:center;box-shadow:0 14px 26px rgba(15,23,42,.13);white-space:nowrap}.score-badge b{font-size:11px;line-height:1;letter-spacing:.03em}.score-badge small{font-size:11px;opacity:.9}.score-hot{background:linear-gradient(135deg,#10b981,#059669 46%,#047857);color:#fff}.score-warm{background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff}.score-cold{background:linear-gradient(135deg,#64748b,#334155);color:#fff}.status-list{display:flex;gap:6px;overflow:auto;padding-bottom:1px;scrollbar-width:thin}.status-pill{min-height:28px;padding:0 9px;font-size:11px}.lead-card-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}.tags{flex-wrap:nowrap;overflow:hidden;min-width:0}.tag{max-width:140px;overflow:hidden;text-overflow:ellipsis}.card-actions{flex-wrap:nowrap;gap:7px;margin-left:auto}.action-btn{border-radius:10px;min-height:32px;padding:0 9px;font-weight:850}.action-btn svg{width:14px;height:14px}
     .kanban-board{display:grid;grid-template-columns:repeat(6,minmax(260px,1fr));gap:12px;overflow-x:auto;padding-bottom:8px}.kanban-column{min-height:560px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.72);padding:10px;display:grid;grid-template-rows:auto minmax(0,1fr);gap:10px;transition:border .18s ease,background .18s ease,box-shadow .18s ease}.kanban-column.drag-over{border-color:rgba(16,185,129,.55);background:#ecfdf5;box-shadow:0 0 0 4px rgba(16,185,129,.10)}.kanban-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:4px 4px 0}.kanban-head strong{font-size:13px}.kanban-count{min-width:26px;height:24px;border-radius:999px;background:#f1f5f9;color:#475569;display:grid;place-items:center;font-size:12px;font-weight:900}.kanban-items{display:grid;align-content:start;gap:10px}
     .detail-profile{display:grid;grid-template-columns:54px minmax(0,1fr);gap:12px;align-items:center}.detail-profile .company-avatar{width:54px;height:54px;border-radius:16px}.detail-profile strong{display:block;font-size:16px;margin-bottom:3px;word-break:break-word}.timeline-item{position:relative}.timeline-item:not(:last-child)::after{content:"";position:absolute;left:10px;top:25px;bottom:-11px;width:1px;background:var(--border)}.timeline-time{color:var(--muted);font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.04em}.email-history{display:grid;gap:10px}.email-entry{border:1px solid var(--border);border-radius:14px;padding:12px;display:grid;gap:5px;background:#f8fafc}.email-entry strong{font-size:13px}.email-entry span{color:var(--muted);font-size:12px}
@@ -787,7 +787,7 @@ const INDEX_HTML = String.raw`
         <div class="brand-mark">XNK</div>
         <div class="brand-title">
           <strong>Quét Dữ Liệu Doanh Nghiệp XNK</strong>
-          <span>Thân tặng chị Rose Hong</span>
+          <span>Công cụ tìm lead doanh nghiệp xuất nhập khẩu</span>
         </div>
       </div>
       <div class="global-search">
@@ -968,7 +968,7 @@ const INDEX_HTML = String.raw`
     </div>
     <div class="modal-body">
       <form id="createUserForm" class="user-create-grid">
-        <div class="field"><label for="newUserName">Tên user</label><input id="newUserName" name="name" placeholder="Rose Hong" required></div>
+        <div class="field"><label for="newUserName">Tên user</label><input id="newUserName" name="name" placeholder="Nguyễn An" required></div>
         <div class="field"><label for="newUserEmail">Email đăng nhập</label><input id="newUserEmail" name="email" type="email" placeholder="user@company.com" required></div>
         <div class="field"><label for="newUserPassword">Mật khẩu</label><input id="newUserPassword" name="password" type="password" minlength="8" placeholder="Tối thiểu 8 ký tự" required></div>
         <div class="field"><label for="newUserRole">Quyền</label><select id="newUserRole" name="role"><option value="user">User</option><option value="admin">Admin</option></select></div>
@@ -1059,7 +1059,7 @@ const INDEX_HTML = String.raw`
 
     const LANG = {
       vi: {
-        brandSub: "Thân tặng chị Rose Hong", global: "Tìm công ty, email, website, địa chỉ", leads: "Lead", email: "Email", interested: "Quan tâm",
+        brandSub: "Công cụ tìm lead doanh nghiệp xuất nhập khẩu", global: "Tìm công ty, email, website, địa chỉ", leads: "Lead", email: "Email", interested: "Quan tâm",
         navDash: "Tổng quan", navFinder: "Tìm lead", navPipe: "Pipeline", navCamp: "Chiến dịch email", navTpl: "Mẫu email", navExport: "Xuất file", navSet: "Cài đặt", navUsers: "Người dùng", navAdmin: "Admin Console", logout: "Đăng xuất",
         sideTitle: "CRM XNK Workspace", sideCopy: "Quản lý lead, email outreach và ghi chú trong một dashboard gọn gàng.",
         pageTitle: "Tạo lead & gửi email tiếp cận", pageCopy: "Quét doanh nghiệp, phân loại cơ hội và gửi email tiếp cận trong cùng một không gian CRM.",
@@ -1071,7 +1071,7 @@ const INDEX_HTML = String.raw`
         custom: "Tùy chỉnh", coop: "Đề nghị hợp tác", dist: "Hợp tác phân phối", follow: "Nhắc lại", langTitle: "Đã đổi ngôn ngữ", langMsg: "Giao diện đang dùng tiếng Việt."
       },
       en: {
-        brandSub: "Dedicated to Rose Hong", global: "Search company, email, website, address", leads: "Leads", email: "Email", interested: "Interested",
+        brandSub: "Import-export business lead scanner", global: "Search company, email, website, address", leads: "Leads", email: "Email", interested: "Interested",
         navDash: "Dashboard", navFinder: "Lead Finder", navPipe: "Lead Pipeline", navCamp: "Email Campaigns", navTpl: "Templates", navExport: "Exports", navSet: "Settings", navUsers: "Users", navAdmin: "Admin Console", logout: "Logout",
         sideTitle: "Premium CRM Workspace", sideCopy: "Manage leads, email outreach and notes in one focused dashboard.",
         pageTitle: "Lead Generation & Email Outreach", pageCopy: "Find businesses, qualify opportunities and send outreach emails in one CRM workspace.",
@@ -1295,6 +1295,19 @@ const INDEX_HTML = String.raw`
     }
     function compactAddress(address) { const parts = normalizeText(address).split(",").map((part) => part.trim()).filter(Boolean); return parts.length > 2 ? parts.slice(-2).join(", ") : (parts.join(", ") || "No address"); }
     function infoItem(name, value, fallback) { const hasValue = Boolean(normalizeText(value)); const text = hasValue ? normalizeText(value) : fallback; return '<div class="info-item ' + (hasValue ? '' : 'muted') + '">' + icon(name) + '<span title="' + escapeHtml(text) + '">' + escapeHtml(text) + '</span></div>'; }
+    function normalizeZaloPhone(phone) {
+      return normalizeText(phone).replace(/^00/, "").replace(/\D/g, "");
+    }
+    function zaloButton(lead) {
+      const phone = normalizeZaloPhone(lead && lead.phone);
+      if (!phone) return "";
+      return '<button class="zalo-button" type="button" data-action="zalo" data-id="' + escapeHtml(lead.id) + '" title="Mở Zalo theo số điện thoại ' + escapeHtml(phone) + '" aria-label="Mở Zalo theo số điện thoại">Zalo</button>';
+    }
+    function phoneInfoItem(lead) {
+      const hasValue = Boolean(normalizeText(lead && lead.phone));
+      const text = hasValue ? normalizeText(lead.phone) : "No phone";
+      return '<div class="info-item ' + (hasValue ? '' : 'muted') + '">' + icon('phone') + '<span title="' + escapeHtml(text) + '">' + escapeHtml(text) + '</span>' + zaloButton(lead) + '</div>';
+    }
     function scoreBadge(lead) { const score = scoreInfo(lead.score); return '<span class="score-badge ' + score.className + '"><b>' + score.label + '</b><small>Score ' + escapeHtml(lead.score || 0) + '</small></span>'; }
     function renderLeadCard(lead, pipeline = false) {
       const checked = state.selectedLeadIds.has(Number(lead.id)) ? "checked" : "";
@@ -1302,7 +1315,7 @@ const INDEX_HTML = String.raw`
       const rating = lead.rating ? String(lead.rating) + (lead.reviews ? " / " + lead.reviews + " reviews" : "") : "";
       return '<article class="lead-card ' + (pipeline ? 'pipeline-card' : '') + '" draggable="true" data-id="' + lead.id + '">' +
         '<div class="lead-top"><input class="lead-checkbox" type="checkbox" data-id="' + lead.id + '" ' + checked + '>' + companyAvatar(lead) + '<div class="company-block"><div class="company-name">' + escapeHtml(lead.name) + '</div><div class="company-meta">' + escapeHtml(compactAddress(lead.address)) + '</div>' + (lead.website ? '<a class="website-link" href="' + escapeHtml(lead.website) + '" target="_blank" rel="noreferrer">' + escapeHtml(host || lead.website) + '</a>' : '<span class="company-meta">No website</span>') + '</div>' + scoreBadge(lead) + '</div>' +
-        '<div class="lead-info-row">' + infoItem('location', compactAddress(lead.address), 'No address') + infoItem('phone', lead.phone, 'No phone') + infoItem('email', lead.email ? primaryEmail(lead) : '', 'No email') + infoItem('star', rating, 'No rating') + infoItem('globe', host, 'No website') + '</div>' +
+        '<div class="lead-info-row">' + infoItem('location', compactAddress(lead.address), 'No address') + phoneInfoItem(lead) + infoItem('email', lead.email ? primaryEmail(lead) : '', 'No email') + infoItem('star', rating, 'No rating') + infoItem('globe', host, 'No website') + '</div>' +
         '<div class="lead-card-footer"><div class="tags">' + tagsForLead(lead) + '</div><div class="card-actions"><button class="action-btn" type="button" data-action="maps" data-id="' + lead.id + '">' + icon('map') + 'Maps</button><button class="action-btn" type="button" data-action="email" data-id="' + lead.id + '">' + icon('mailSend') + 'Email</button><button class="action-btn" type="button" data-action="note" data-id="' + lead.id + '">' + icon('note') + 'Note</button></div></div>' +
         (pipeline ? '' : statusPills(lead)) +
       '</article>';
@@ -1359,6 +1372,20 @@ const INDEX_HTML = String.raw`
       return data;
     }
     function openUrl(url) { if (url) window.open(url, "_blank", "noopener,noreferrer"); }
+    function openZalo(phone) {
+      const normalized = normalizeZaloPhone(phone);
+      if (!normalized) {
+        showToast("Không có số điện thoại", "Lead này chưa có số để mở Zalo.", "error");
+        return;
+      }
+      const appUrl = "zalo://conversation?phone=" + encodeURIComponent(normalized);
+      const webUrl = "https://zalo.me/" + encodeURIComponent(normalized);
+      showToast("Đang mở Zalo", normalized, "success");
+      window.location.href = appUrl;
+      window.setTimeout(() => {
+        if (!document.hidden) window.open(webUrl, "_blank", "noopener,noreferrer");
+      }, 1200);
+    }
     function openSettings() { settingsModal.classList.add("open"); settingsBackdrop.classList.add("open"); settingsModal.setAttribute("aria-hidden", "false"); }
     function closeSettings() { settingsModal.classList.remove("open"); settingsBackdrop.classList.remove("open"); settingsModal.setAttribute("aria-hidden", "true"); }
     function openComposer() { emailComposer.classList.add("open"); composerBackdrop.classList.add("open"); emailComposer.setAttribute("aria-hidden", "false"); updateComposerSubtitle(); updateEmailPreview(); }
@@ -1392,7 +1419,7 @@ const INDEX_HTML = String.raw`
         '<div class="detail-section"><h4>Company Overview</h4><div class="detail-profile">' + companyAvatar(lead) + '<div><strong>' + escapeHtml(lead.name || 'Unknown company') + '</strong><span class="company-meta">' + escapeHtml(compactAddress(lead.address)) + '</span></div></div><div class="detail-list">' +
         '<div class="detail-row"><span>Website</span><strong>' + (lead.website ? '<a class="website-link" href="' + escapeHtml(lead.website) + '" target="_blank" rel="noreferrer">' + escapeHtml(lead.website) + '</a>' : 'No website') + '</strong></div>' +
         '<div class="detail-row"><span>Address</span><strong>' + escapeHtml(lead.address || '-') + '</strong></div>' +
-        '<div class="detail-row"><span>Phone</span><strong>' + escapeHtml(lead.phone || 'No phone') + '</strong></div>' +
+        '<div class="detail-row"><span>Phone</span><strong><span class="zalo-inline">' + escapeHtml(lead.phone || 'No phone') + zaloButton(lead) + '</span></strong></div>' +
         '<div class="detail-row"><span>Email</span><strong>' + escapeHtml(lead.email || 'No email found') + '</strong></div>' +
         '</div></div>' +
         '<div class="detail-section"><h4>Lead Intelligence</h4><div class="detail-list">' +
@@ -1413,6 +1440,7 @@ const INDEX_HTML = String.raw`
           renderLeadDrawer(lead.id);
         } catch (error) { showToast("Không lưu được", error.message, "error"); }
       });
+      $$('[data-action="zalo"]', leadDrawerBody).forEach((button) => button.addEventListener("click", (event) => { event.stopPropagation(); openZalo(lead.phone); }));
       $$('[data-action="status"]', leadDrawerBody).forEach((pill) => pill.addEventListener("click", onStatusClick));
     }
     async function onStatusClick(event) {
@@ -1526,6 +1554,7 @@ const INDEX_HTML = String.raw`
         if (!lead) return;
         if (action.dataset.action === "website") openUrl(lead.website);
         if (action.dataset.action === "maps") openUrl(lead.maps_url);
+        if (action.dataset.action === "zalo") openZalo(lead.phone);
         if (action.dataset.action === "email") { state.selectedLeadIds.add(Number(lead.id)); openComposer(); renderLeads(); }
         if (action.dataset.action === "note") openLeadDrawer(lead.id);
         return;
