@@ -7,7 +7,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "start": "node server.mjs"
+    "start": "node server.mjs",
+    "netlify:check": "node --check netlify/functions/search.mjs"
   },
   "devDependencies": {
     "@yao-pkg/pkg": "^6.20.0"

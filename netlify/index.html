@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quét Dữ Liệu Doanh Nghiệp XNK</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div class="gate" id="gate">
+    <form class="gate-card" id="gateForm">
+      <div class="brand"><div class="mark">XNK</div><div><strong>Quét Dữ Liệu Doanh Nghiệp XNK</strong><span>Nhập mật khẩu truy cập nếu chủ tool đã bật bảo vệ.</span></div></div>
+      <label class="field">Mật khẩu truy cập<input id="accessPassword" type="password" placeholder="Để trống nếu không có mật khẩu"></label>
+      <button class="button" type="submit">Vào tool</button>
+      <button class="button secondary" type="button" id="skipGate">Dùng không mật khẩu</button>
+      <p class="muted">SerpApi key do từng người dùng nhập riêng và không lưu trên server.</p>
+    </form>
+  </div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><div class="mark">XNK</div><div><strong>Quét Dữ Liệu Doanh Nghiệp XNK</strong><span>Bản online free, dữ liệu lưu trên trình duyệt.</span></div></div>
+      <nav><button class="nav active" type="button">Tìm lead</button><button class="nav" type="button" id="exportNav">Xuất file</button><button class="nav" type="button" id="clearNav">Xóa kết quả cũ</button></nav>
+      <div class="note"><strong>Local-only Workspace</strong><span>Khách quét lead xong tải CSV/XLS về máy. Tool không dùng database.</span></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><h1>Tìm doanh nghiệp từ Google Maps</h1><p>Nhập từ khóa, địa điểm và SerpApi key để lấy danh sách khách hàng tiềm năng.</p></div>
+        <div class="stats"><div><span>Lead</span><strong id="totalLead">0</strong></div><div><span>Đã chọn</span><strong id="selectedLead">0</strong></div><div><span>Có phone</span><strong id="phoneLead">0</strong></div></div>
+      </header>
+      <section class="layout">
+        <section class="panel search-panel">
+          <div class="panel-head"><h2>Tìm lead</h2><span>Google Maps qua SerpApi</span></div>
+          <form class="form" id="searchForm">
+            <label class="field">Từ khóa<input id="keyword" name="keyword" placeholder="coffee importer, seafood distributor" required></label>
+            <label class="field">Địa điểm<input id="location" name="location" placeholder="California, Germany, Tokyo" required></label>
+            <label class="field">SerpApi key<input id="serpapiKey" name="serpapi_key" type="password" placeholder="Dán SerpApi key vào đây" required></label>
+            <label class="check"><input id="saveApiKey" type="checkbox"> Lưu SerpApi key trên trình duyệt này</label>
+            <div class="two"><label class="field">Rating tối thiểu<input id="minRating" type="number" min="0" max="5" step="0.1"></label><label class="field">Điểm lead<input id="minScore" type="number" min="0" max="100" step="1"></label></div>
+            <div class="two"><button class="button" id="searchButton" type="submit">Tìm lead</button><button class="button secondary" id="saveSearch" type="button">Lưu tìm kiếm</button></div>
+            <div class="two"><button class="button secondary" id="clearKey" type="button">Xóa API key</button><button class="button danger" id="clearResults" type="button">Xóa kết quả</button></div>
+          </form>
+          <pre class="log" id="log">Sẵn sàng tìm lead.</pre>
+        </section>
+        <section class="panel results-panel">
+          <div class="filters"><input id="globalFilter" placeholder="Lọc theo tên, phone, website, địa chỉ"><select id="statusFilter"><option value="all">Tất cả</option><option value="selected">Đã chọn</option><option value="phone">Có phone</option><option value="website">Có website</option></select><select id="sortBy"><option value="score">Theo điểm</option><option value="name">Theo tên</option><option value="rating">Theo rating</option></select><label class="check"><input id="selectAll" type="checkbox"> Chọn tất cả</label></div>
+          <div class="result-head"><strong>Lead đã tìm</strong><div><button class="small" id="exportCsv" type="button">CSV</button><button class="small" id="exportXls" type="button">Excel</button><button class="small danger-text" id="deleteSelected" type="button">Xóa đã chọn</button></div></div>
+          <div class="cards" id="cards"><div class="empty">Chưa có lead. Hãy chạy tìm kiếm đầu tiên.</div></div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <div class="toast-wrap" id="toastWrap"></div>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
